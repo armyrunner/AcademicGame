@@ -21,3 +21,21 @@ class Hero(character):
     def setAmmo(self,ammo):
         self.mAmmo = ammo
         return
+
+    def move(self,newX,newY):
+        if self.mX == newX and self.mY == newY:
+            return
+        diffx = newX - self.mX
+        diffy = newY - self.mY
+        diff = abs(diffx) + abs(diffy)
+        ratiox = float(diffx) / float(diff)
+        ratioy = float(diffy) / float(diff)
+        dx = int(ratiox * self.mSpeed)
+        dy = int(ratioy * self.mSpeed)
+        if abs(dx) > abs(diffx):
+            dx = diffx
+        if abs(dy) > abs(diffy):
+            dy = diffy
+        self.mX += dx
+        self.mY += dy
+        self.move(newX,newY)
