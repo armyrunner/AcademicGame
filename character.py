@@ -1,34 +1,39 @@
-class Character: 
+class character: 
     
     def __init__(self,x,y,w,h):
         self.mX = x
         self.mY = y
         self.mW = w
         self.mH = h
-    
-    def getX():
+        return 
+
+    def getX(self):
         return self.mX
     
-    def setX(x):
+    def setX(self,x):
         self.mX = x
+        return
       
-    def getY():
+    def getY(self):
         return self.mY
     
-    def setY(y):
+    def setY(self,y):
         self.mY = y
+        return
       
-    def getW():
+    def getW(self):
         return self.mW
     
-    def setW(w):
+    def setW(self,w):
         self.mW = w
+        return
       
-    def getH():
+    def getH(self):
         return self.mH
     
-    def setH(h):
+    def setH(self,h):
         self.mH = h
+        return
         
         
         
