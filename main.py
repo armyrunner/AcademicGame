@@ -1,7 +1,7 @@
 import pygame
 import game
 # YOU SHOULD CHANGE THIS TO IMPORT YOUR GAME MODULE
-import acdemicgame
+import academicgame
 """
 DNumber: D00090307
 Name: Andrew Nelson
@@ -26,7 +26,7 @@ class PygameApp( game.Game ):
         game.Game.__init__( self, title, width, height, frame_rate )
         # create a game instance
         # YOU SHOULD CHANGE THIS TO IMPORT YOUR GAME MODULE
-        self.acdemicgame = acdemicgame.AcdemicGame(width,height)
+        self.academicgame = academicgame.AcademicGame(width,height)
         return
 
 
@@ -35,18 +35,18 @@ class PygameApp( game.Game ):
         # KEYS TO MOVE HERO
 
         if pygame.K_UP in newkeys:
-            self.acdemicgame.actionUP( )
+            self.academicgame.actionUP( )
         if pygame.K_DOWN in newkeys:
-            self.acdemicgame.actionDOWN( )
+            self.academicgame.actionDOWN( )
         if pygame.K_LEFT in newkeys:
-            self.acdemicgame.actionLEFT( )
+            self.academicgame.actionLEFT( )
         if pygame.K_RIGHT in newkeys:
-            self.acdemicgame.actionRIGHT( )
-        self.acdemicgame.evolve(dt)
+            self.academicgame.actionRIGHT( )
+        self.academicgame.evolve(dt)
 
     def paint( self, surface ):
         # Draw the current state of the game instance
-        self.acdemicgame.draw( surface )
+        self.academicgame.draw( surface )
         return
 
 def main( ):
