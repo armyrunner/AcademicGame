@@ -36,10 +36,7 @@ class character:
         return
 
     def containsPoint(self, x, y):
-        if( (x >= self.getX()) and
-            (x <= self.getX() + self.getW()) and
-            (y >= self.getY()) and
-            (y <= self.getY() + self.getH()) ):
+        if( (x >= self.getX()) and (x <= self.getX() + self.getW()) and (y >= self.getY()) and (y <= self.getY() + self.getH()) ):
             return True
         return False
 
@@ -55,12 +52,12 @@ class character:
 
         for point in ourborders:
             x, y = point
-            if other.containsPoint(x, y):
+            if other.containsPoint(x,y):
                 return True
 
         for opoint in theirborders:
             x, y = opoint
-            if self.containsPoint(x, y):
+            if self.containsPoint(x,y):
                 return True
         
         return False
