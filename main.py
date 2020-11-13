@@ -12,7 +12,7 @@ Assignment: FROGGER
 # YOU SHOULD CONFIGURE THESE TO MATCH YOUR GAME
 
 
-TITLE = "FROGGER" # window title bar text
+TITLE = "QUEST FOR KNOWLEDGE" # window title bar text
 
 WINDOW_WIDTH  = 700# pixels width
 WINDOW_HEIGHT = 800 # pixels high
