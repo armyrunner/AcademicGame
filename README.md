@@ -1,7 +1,7 @@
 # AcademicGame
 
 ## Description
-This game is an academic game. Where a player will navigate through a scence killing bosses and go to a shop to collect items for the next round. If the user answers the question correcting then the armor or weapons will be refilled and food for strength will go up. However if answered in correctly then they may have more of a challenge the next level of the game.
+This game is an academic game where a player will navigate through a scence killing bosses and go to a shop to collect items for the next round. If the user answers the corresponding question correctly then the armor or weapons will be refilled and food or strength will go up. However if answered incorrectly then they may have more of a challenge the next level of the game.
 
 ## Responsiblities for Team 
 Kendra - Collsions/Resource/Animation
@@ -17,7 +17,7 @@ weapons
 type weapon/ positions / shield / 
 
 shop:
-poitions for life
+potions for life
 food 
 
 character:
