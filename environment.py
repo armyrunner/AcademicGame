@@ -25,7 +25,7 @@ class Scene(pygame.sprite.Sprite):
 class ShopScene(Scene):
 	def __init__(self, width, height):
 		Scene.__init__(self, "Images/shop.jpg", width, height)
-		self.quiz_bank = QuizData.QuizData()
+		self.quiz_bank = quizdata.QuizData()
 		self.displaymode = ""
 		self.phase = 0
 		self.my_question = ""
