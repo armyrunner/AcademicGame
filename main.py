@@ -25,8 +25,7 @@ WALKLEFT = [pygame.image.load('Images/L1.png'), pygame.image.load('Images/L2.png
             pygame.image.load('Images/L9.png')]
 
 STANDING = pygame.image.load('Images/standing.png')
-music = pygame.mixer.music.load("Sound/music.mp3")
-pygame.mixer.music.play(-1)
+
 
 
 TITLE = "QUEST FOR KNOWLEDGE" # window title bar text
