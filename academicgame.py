@@ -38,20 +38,22 @@ class AcademicGame:
         pass
 
     def actionRIGHT():
-        if self.mX < self.mWidth - self.velocity - self.mObjWidth:
-            self.mX += self.velocity
-            self.left = True
-            self.right = False
-        else:
-            self.left = False
-            self.right = False
-            self.walkcount = 0
+        # if self.mX < self.mWidth - self.velocity - self.mObjWidth:
+        #     self.mX += self.velocity
+        #     self.left = True
+        #     self.right = False
+        # else:
+        #     self.left = False
+        #     self.right = False
+        #     self.walkcount = 0
+        pass
 
     def actionLEFT():
-        if self.mX > self.velocity:
-            self.mX -= self.velocity
-            self.left = False
-            self.right = True
+        # if self.mX > self.velocity:
+        #     self.mX -= self.velocity
+        #     self.left = False
+        #     self.right = True
+        pass
     
     def acitionDown():
         pass
