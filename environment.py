@@ -54,7 +54,7 @@ class ShopScene(Scene):
 		Scene.draw(self, surface)
 		if self.phase == 0:
 			mytext = "Welcome to the Shop. Let us test your Knowledge"
-			
+
 			text_surface = self.font_obj.render(mytext, False, pygame.Color(0,0,0))
 			self.dialog.blit(text_surface, self.dialog_rect)
 		else:
