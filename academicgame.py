@@ -15,6 +15,12 @@ class AcademicGame:
         self.mHeight = height
         self.GameOver = False
         self.HeroWins = False
+        self.Right = False
+        self.Left = False
+        self.walkcount = 0
+        self.isJump = False
+        self.jumpCount = 10
+        self.velocity = 5
 
 
 
@@ -31,9 +37,13 @@ class AcademicGame:
         pass
 
     def actionLEFT():
+
         pass
 
     def acitionDown():
+        pass
+
+    def actionSPACEBAR():
         pass
    
 
