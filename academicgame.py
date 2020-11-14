@@ -61,8 +61,9 @@ class AcademicGame:
 
 
     def draw(self,surface):
+
+        self.envAction.draw(surface,5,5)
         self.envShop.draw(surface)
-        # self.envAction.draw(surface)
         for objects in self.mBullet:
             objects.draw(surface)
 

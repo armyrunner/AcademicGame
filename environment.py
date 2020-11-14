@@ -80,10 +80,6 @@ class ShopScene(Scene):
 			surface.blit(bottom_text_surface, self.bottom_dialog)
 			
 
-
-
-
-
 #--------------------------------------------------------------#
 class ActionScene(Scene):
 	def __init__(self, width, height, max_health, max_ammo):
