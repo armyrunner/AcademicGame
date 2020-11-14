@@ -13,7 +13,7 @@ class QuizData:
         self.English["Choose the correct spelling. "] =("a","a.famous b.famus c.famos")
         self.English["Choose the past tense verb for this sentence. My mom ____(make) tacos on Tuesday." ]=("a","a.made b.makes c.is making d.make")
         self.English["Choose the correct homophone. I would like another _____ of cake." ]=("a","a.piece b.peace c.peece d.peez")
-        self.English["We had a great day at the beach. a.Fact b.Opinion"]=a
+        self.English["We had a great day at the beach. "]=("a","a.Fact b.Opinion")
         self.English["Which sentence shows correct subject and predicate agreement? "]=("b","a.Lizards and snakes lives in Flordia. b.Lizards and snakes live in Flordia. c.Mary sing like a bird. d.The cheerleaders walks in the parades.")
     
     #Geography
