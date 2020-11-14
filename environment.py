@@ -18,6 +18,7 @@ class Scene(pygame.sprite.Sprite):
 
 	def draw(self, surface):
 		surface.blit(self.bg_image, self.screen_rect)
+		surface.blit(self.dialog, self.dialog_rect)
 
 
 
@@ -57,8 +58,7 @@ class ShopScene(Scene):
 			mytext = "Welcome to the Shop. Let us test your Knowledge"
 			
 			text_surface = self.font_obj.render(mytext, False, pygame.Color(0,0,0))
-			self.dialog.blit(text_surface, self.dialog_rect)
-			surface.blit(self.dialog, self.dialog_rect)
+			surface.blit(text_surface, self.dialog_rect)
 		else:
 			pass
 			#topdialog =  
