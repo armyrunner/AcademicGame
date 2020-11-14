@@ -2,8 +2,8 @@ from character import character
 
 class Hero(character):
 
-    def __init__(self,x,y,w,h,speed,ammo):
-        character.__init__(self,x,y,w,h)
+    def __init__(self,x,y,dx,dy,w,h,speed,ammo):
+        character.__init__(self,x,y,dx,dy,w,h)
         self.mSpeed = speed
         self.mAmmo = ammo
         self.w = w
@@ -31,8 +31,8 @@ class Hero(character):
     
     def moveRight(self,dx,right_limit):
         self.mX += dx
-        if self.getX() > right_limit -50:
-            self.mX = right_limit -200
+        if self.getX() > right_limit - 50:
+            self.mX = right_limit - 200
         return
 
     

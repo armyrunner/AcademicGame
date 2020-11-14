@@ -3,6 +3,8 @@ import game
 # YOU SHOULD CHANGE THIS TO IMPORT YOUR GAME MODULE
 import academicgame
 import hero
+
+
 """
 DNumber: D00090307
 Name: Andrew Nelson
@@ -70,6 +72,9 @@ class PygameApp( game.Game ):
             self.WALKCOUNT += 1
             self.Right = True
             self.Left = False
+        if pygame.K_SPACEBAR in keys:
+            self.academicgame.fire()
+            
         self.academicgame.evolve(dt)
 
     def paint( self, surface ):

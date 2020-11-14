@@ -1,10 +1,12 @@
 class character: 
     
-    def __init__(self,x,y,w,h):
+    def __init__(self,x,y,dx,dy,w,h):
         self.mX = x
         self.mY = y
         self.mW = w
         self.mH = h
+        self.mDX = dx
+        self.mDY = dy
         return 
 
     def getX(self):
@@ -23,6 +25,13 @@ class character:
       
     def getW(self):
         return self.mW
+
+    def getDX(self):
+        return self.mDX
+
+    def getDY(self):
+        return self.mDY
+
     
     def setW(self,w):
         self.mW = w
@@ -61,3 +70,8 @@ class character:
                 return True
         
         return False
+    
+    def move(self,dt):
+        self.mX += self.mDX*dt
+        self.mY += self.mDY.dt
+        return
