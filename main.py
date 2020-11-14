@@ -61,7 +61,8 @@ class PygameApp( game.Game ):
         if pygame.K_UP in keys:
             self.academicgame.actionUP( )
         if pygame.K_DOWN in keys:
-            self.academicgame.actionDOWN( )
+            
+            self.academicgame.AcitonPressDown()
         if pygame.K_LEFT in keys:
             self.hero.moveLeft(5)
             self.WALKCOUNT += 1

@@ -98,12 +98,6 @@ class ActionScene(Scene):
 
 	def draw(self, surface, health, ammo):
 		Scene.draw(self, surface)
-		health_rect = pygame.Surface(self.max_health/(health * (width/2)), height/12)
-		ammo_rect = pygame.Surface(self.max_ammo/(ammo * width), height/12)
-
-		surface.blit(health_rect, self.dialog_rect)
-		surface.blit(ammo_rect, self.dialog_right)
-
 
 
 

@@ -2,14 +2,14 @@ import pygame
 import environment
 import hero
 import bullet
+import time
 
 
 
 class AcademicGame:
     def __init__(self,width,height):
         self.envShop = environment.ShopScene(width,height)
-       #self.envAction = environment.ActionScene(width,height,heatlth,self.)
-
+        self.envAction = environment.ActionScene(width,height,5,5)
         self.mWidth = width
         self.mHeight = height
         self.GameOver = False
@@ -49,10 +49,20 @@ class AcademicGame:
     def ActionPressSpaceBar(self):
         self.ammo.Fire()
 
+    def AcitonPressDown(self):
+        
+        #maybe i am implementing this wrong???
+        # self.envSho
+        # p.getQuestions()
+        time.sleep(.3)
+        char = "abcd"
+        for ans in char:
+            self.envShop.updateDisplayLogic(ans)
+
 
     def draw(self,surface):
         self.envShop.draw(surface)
-        #self.envAction.draw(surface)
+        # self.envAction.draw(surface)
         for objects in self.mBullet:
             objects.draw(surface)
 
