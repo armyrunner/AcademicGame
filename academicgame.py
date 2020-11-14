@@ -24,6 +24,7 @@ class AcademicGame:
         self.mY = 400
         self.mObjWidth = 40
         self.mObjHeight = 60
+        self.mHero = hero.Hero(3,3,0,0,width,height,2)
         self.mBullet = []
 
     def getmBullet(self):
@@ -35,12 +36,10 @@ class AcademicGame:
             firex = self.mHero.mX
             firey = self.mHero.mY
             firedx = self.mHero.mDX
-            firedx = self.mHero.mDY
-            fire_round = bullet.Bullet()
-            ammo = bullet.Bullet(firex,firey,firedx,firedy,height,width)
+            firedy = self.mHero.mDY
+            ammo = bullet.Bullet(firex,firey,firedx,firedy,self.mHeight,self.mWidth)
             self.mBullet.append(ammo)
-            self.mHero = hero.Hero(3,3,width,height,2,self.mBullet)
-
+       
 
     def evolve(self,dt):
 
@@ -54,5 +53,6 @@ class AcademicGame:
     def draw(self,surface):
         self.envShop.draw(surface)
         #self.envAction.draw(surface)
-        self.mBullet.draw(surface)
+        for objects in self.mBullet:
+            objects.draw(surface)
 

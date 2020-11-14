@@ -2,11 +2,9 @@ from character import character
 
 class Hero(character):
 
-    def __init__(self,x,y,dx,dy,w,h,speed,ammo):
+    def __init__(self,x,y,dx,dy,w,h,speed):
         character.__init__(self,x,y,dx,dy,w,h)
         self.mSpeed = speed
-        self.mAmmo = ammo
-        self.w = w
         return
 
     def getSpeed(self):
@@ -16,12 +14,10 @@ class Hero(character):
         self.mSpeed = speed
         return
 
-    def getAmmo(self):
-        return self.mAmmo
+    def fire(self):
+        pass
 
-    def setAmmo(self,ammo):
-        self.mAmmo = ammo
-        return
+
 
     def moveLeft(self,dx,):
         self.mX -= dx

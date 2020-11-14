@@ -42,7 +42,7 @@ class PygameApp( game.Game ):
         # create a game instance
         # YOU SHOULD CHANGE THIS TO IMPORT YOUR GAME MODULE
         self.academicgame = academicgame.AcademicGame(width,height)
-        self.hero = hero.Hero(5,500,10,10,0,0)
+        self.hero = hero.Hero(5,500,0,0,10,10,0)
         self.WALKCOUNT = 0
         self.Left = False
         self.Right = False
@@ -72,7 +72,7 @@ class PygameApp( game.Game ):
             self.WALKCOUNT += 1
             self.Right = True
             self.Left = False
-        if pygame.K_SPACEBAR in keys:
+        if pygame.K_a in keys:
             self.academicgame.fire()
             
         self.academicgame.evolve(dt)

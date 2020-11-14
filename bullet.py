@@ -1,4 +1,4 @@
-
+import pygame
 
 class Bullet:
     def __init__(self,x,y,dx,dy,height,width):
@@ -39,12 +39,11 @@ class Bullet:
     def setDy(self,value):
         self.mDy=value
     
-    
-    def drawBullet(self):
+    def drawBullet(self,surface):
         color=(1,1,1)
         center=(self.mX,self.mY)
         radius=5
-        draw.pygame.circle(surface, color, center, radius)
+        pygame.draw.circle(surface, color, center, radius)
         
     def draw(self,surface):
-        drawBullet(surface)
+        self.drawBullet(surface)
