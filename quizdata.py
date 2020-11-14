@@ -10,7 +10,7 @@ class QuizData:
     #English
         self.English["What is missing in this sentence? the dog is black and white."]=("a","a.capital letter b.period c.red")
         self.English["Which word has a short /e/ sound? "]=('c',"a.bad b.bee c.bed" )
-        self.Enlgish["Choose the correct spelling. "] =("a","a.famous b.famus c.famos")
+        self.English["Choose the correct spelling. "] =("a","a.famous b.famus c.famos")
         self.English["Choose the past tense verb for this sentence. My mom ____(make) tacos on Tuesday." ]=("a","a.made b.makes c.is making d.make")
         self.Enlgish["Choose the correct homophone. I would like another _____ of cake." ]=("a","a.piece b.peace c.peece d.peez")
         self.English["We had a great day at the beach. a.Fact b.Opinion"]=a
