@@ -1,6 +1,6 @@
 import random
 import pygame
-import QuizData
+import quizdata
 
 class Scene(pygame.sprite.Sprite):
 	def __init__(self, filename, width, height):
