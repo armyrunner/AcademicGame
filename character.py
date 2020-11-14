@@ -32,6 +32,11 @@ class character:
     def getDY(self):
         return self.mDY
 
+    def setDX(self,dx):
+        self.mDX += dx
+
+    def setDY(self,dy):
+        self.mDY +=dy
     
     def setW(self,w):
         self.mW = w

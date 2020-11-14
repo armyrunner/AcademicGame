@@ -40,9 +40,9 @@ class Bullet:
         self.mDy=value
     
     def drawBullet(self,surface):
-        color=(1,1,1)
+        color=(255,255,255)
         center=(self.mX,self.mY)
-        radius=5
+        radius = 2
         pygame.draw.circle(surface, color, center, radius)
         
     def draw(self,surface):

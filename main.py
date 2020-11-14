@@ -1,4 +1,5 @@
 import pygame
+pygame.init()
 import game
 # YOU SHOULD CHANGE THIS TO IMPORT YOUR GAME MODULE
 import academicgame
@@ -24,6 +25,8 @@ WALKLEFT = [pygame.image.load('Images/L1.png'), pygame.image.load('Images/L2.png
             pygame.image.load('Images/L9.png')]
 
 STANDING = pygame.image.load('Images/standing.png')
+music = pygame.mixer.music.load("Sound/music.mp3")
+pygame.mixer.music.play(-1)
 
 
 TITLE = "QUEST FOR KNOWLEDGE" # window title bar text
@@ -58,10 +61,10 @@ class PygameApp( game.Game ):
         # KEYS TO MOVE HERO
         if self.WALKCOUNT + 1 >= 27:
             self.WALKCOUNT =0 
-        if pygame.K_UP in keys:
-            self.academicgame.actionUP( )
+        # if pygame.K_UP in keys:
+        #     self.academicgame.actionUP( )
         if pygame.K_DOWN in keys:
-            
+
             self.academicgame.AcitonPressDown()
         if pygame.K_LEFT in keys:
             self.hero.moveLeft(5)
@@ -73,7 +76,7 @@ class PygameApp( game.Game ):
             self.WALKCOUNT += 1
             self.Right = True
             self.Left = False
-        if pygame.K_a in keys:
+        if pygame.K_UP in keys:
             self.academicgame.fire()
             
         self.academicgame.evolve(dt)

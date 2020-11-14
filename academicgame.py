@@ -24,7 +24,7 @@ class AcademicGame:
         self.mY = 400
         self.mObjWidth = 40
         self.mObjHeight = 60
-        self.mHero = hero.Hero(3,3,0,0,width,height,2)
+        self.mHero = hero.Hero(40,532,1,1,width,height,2)
         self.mBullet = []
 
     def getmBullet(self):
@@ -66,4 +66,5 @@ class AcademicGame:
         self.envShop.draw(surface)
         for objects in self.mBullet:
             objects.draw(surface)
+            
 
