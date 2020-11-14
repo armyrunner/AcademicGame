@@ -45,5 +45,6 @@ class Bullet:
         center=(self.mX,self.mY)
         radius=5
         draw.pygame.circle(surface, color, center, radius)
+        
     def draw(self,surface):
         drawBullet(surface)

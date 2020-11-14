@@ -6,6 +6,8 @@ class Hero(character):
         character.__init__(self,x,y,w,h)
         self.mSpeed = speed
         self.mAmmo = ammo
+        
+
         return
 
     def getSpeed(self):
