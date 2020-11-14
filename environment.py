@@ -12,9 +12,9 @@ class Scene(pygame.sprite.Sprite):
 		self.screen_rect = image.get_rect()
 		self.dialog = pygame.Surface((width, height/6))
 		self.dialog.fill(pygame.Color(255,255,255))
-		self.dialog_rect = pygame.Rect(0, 0, width, height/6)
+		self.dialog_rect = pygame.Rect(0, height, width, height/6)
 		sysfont = pygame.font.get_default_font()
-		self.font_obj = pygame.font.SysFont(sysfont, 115)
+		self.font_obj = pygame.font.SysFont(sysfont, 35)
 
 	def draw(self, surface):
 		surface.blit(self.bg_image, self.screen_rect)
