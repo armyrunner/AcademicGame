@@ -2,6 +2,7 @@ import pygame
 import game
 # YOU SHOULD CHANGE THIS TO IMPORT YOUR GAME MODULE
 import academicgame
+import hero
 """
 DNumber: D00090307
 Name: Andrew Nelson
@@ -27,6 +28,7 @@ class PygameApp( game.Game ):
         # create a game instance
         # YOU SHOULD CHANGE THIS TO IMPORT YOUR GAME MODULE
         self.academicgame = academicgame.AcademicGame(width,height)
+        self.hero = hero.Hero(0,0,10,10,0,0)
         return
 
 
@@ -47,6 +49,8 @@ class PygameApp( game.Game ):
     def paint( self, surface ):
         # Draw the current state of the game instance
         self.academicgame.draw( surface )
+        image = pygame.image.load(r'Images/L1.png') 
+        surface.blit(image, (self.hero.getX(), self.hero.getY())) 
         return
 
 def main( ):
