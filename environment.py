@@ -12,7 +12,7 @@ class Scene(pygame.sprite.Sprite):
 		self.screen_rect = image.get_rect()
 		self.dialog = pygame.Surface((width, height/6))
 		self.dialog.fill(pygame.Color(255,255,255))
-		self.dialog_rect = pygame.rect(0, 0, width, height/6)
+		self.dialog_rect = pygame.Rect(0, 0, width, height/6)
 		sysfont = pygame.font.get_default_font()
 		self.font_obj = pygame.font.SysFont(sysfont, 15)
 
@@ -29,7 +29,7 @@ class ShopScene(Scene):
 		self.displaymode = ""
 		self.phase = 0
 		self.my_question = ""
-		self,my_answer = ""
+		self.my_answer = ""
 		self.all_answers = ""
 
 	def updateDisplayLogic(self, answer = ""):
@@ -39,7 +39,7 @@ class ShopScene(Scene):
 
 	def getQuestions(self):
 		self.my_question = ""
-		self,my_answer = ""
+		self.my_answer = ""
 		self.all_answers = ""
 		if self.phase == 1:
 			self.my_question = random.choice(list(quiz_bank.English.keys()))
@@ -66,7 +66,7 @@ class ShopScene(Scene):
 
 #--------------------------------------------------------------#
 class ActionScene(Scene):
-	def __init__(self, arg):
+	def __init__(self, width, height):
 		Scene.__init__(self, "Images/bg.jpg", width, height)
 
 	def draw(self, surface, health, ammo):
