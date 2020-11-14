@@ -32,35 +32,8 @@ class AcademicGame:
 
         if self.GameOver:
             return
-        
 
-    def actionUP():
-        pass
 
-    def actionRIGHT():
-        # if self.mX < self.mWidth - self.velocity - self.mObjWidth:
-        #     self.mX += self.velocity
-        #     self.left = True
-        #     self.right = False
-        # else:
-        #     self.left = False
-        #     self.right = False
-        #     self.walkcount = 0
-        pass
-
-    def actionLEFT():
-        # if self.mX > self.velocity:
-        #     self.mX -= self.velocity
-        #     self.left = False
-        #     self.right = True
-        pass
-    
-    def acitionDown():
-        pass
-
-    def actionSPACEBAR():
-        pass
-   
 
     def draw(self,surface):
         self.envShop.draw(surface)
