@@ -14,8 +14,8 @@ Assignment: FROGGER
 
 TITLE = "QUEST FOR KNOWLEDGE" # window title bar text
 
-WINDOW_WIDTH  = 700# pixels width
-WINDOW_HEIGHT = 800 # pixels high
+WINDOW_WIDTH  = 900# pixels width
+WINDOW_HEIGHT = 780 # pixels high
 DESIRED_RATE  = 30 # frames per second
 
 
