@@ -28,7 +28,7 @@ class PygameApp( game.Game ):
         # create a game instance
         # YOU SHOULD CHANGE THIS TO IMPORT YOUR GAME MODULE
         self.academicgame = academicgame.AcademicGame(width,height)
-        self.hero = hero.Hero(0,0,10,10,0,0)
+        self.hero = hero.Hero(5,500,10,10,0,0)
         return
 
 
@@ -49,7 +49,12 @@ class PygameApp( game.Game ):
     def paint( self, surface ):
         # Draw the current state of the game instance
         self.academicgame.draw( surface )
-        image = pygame.image.load(r'Images/L1.png') 
+        if self.hero.getSpeed() == 0:
+            image = pygame.image.load(r'Images/R1.png') 
+        elif self.hero.getSpeed() > 0: #somehow figure out direction he's walking, currently goes right.
+            image = pygame.image.load(r'Images/R2.png')
+        else:
+            image = pygame.image.load(r'Images/L2.png')
         surface.blit(image, (self.hero.getX(), self.hero.getY())) 
         return
 
