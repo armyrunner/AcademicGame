@@ -14,7 +14,7 @@ class Scene(pygame.sprite.Sprite):
 		self.dialog.fill(pygame.Color(255,255,255))
 		self.dialog_rect = pygame.Rect(0, 0, width, height/6)
 		sysfont = pygame.font.get_default_font()
-		self.font_obj = pygame.font.SysFont(sysfont, 15)
+		self.font_obj = pygame.font.SysFont(sysfont, 115)
 
 	def draw(self, surface):
 		surface.blit(self.bg_image, self.screen_rect)
@@ -52,11 +52,13 @@ class ShopScene(Scene):
 
 	def draw(self, surface):
 		Scene.draw(self, surface)
+
 		if self.phase == 0:
 			mytext = "Welcome to the Shop. Let us test your Knowledge"
 			
 			text_surface = self.font_obj.render(mytext, False, pygame.Color(0,0,0))
 			self.dialog.blit(text_surface, self.dialog_rect)
+			surface.blit(self.dialog, self.dialog_rect)
 		else:
 			pass
 			#topdialog =  
@@ -70,5 +72,9 @@ class ActionScene(Scene):
 		Scene.__init__(self, "Images/bg.jpg", width, height)
 
 	def draw(self, surface, health, ammo):
-		pass
-		
+		Scene.draw(self, surface)
+
+
+#if __name__ == '__main__':
+#	data = quizdata.QuizData()
+#	print(data.English)
