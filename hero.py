@@ -23,7 +23,7 @@ class Hero(character):
         return
 
     def move(self,newX,newY):
-        if self.mX == newX and self.mY == newY:
+        if (self.mX == newX and self.mY == newY) or (self.mX<0 or self.mY<0 or (self.mX+self.mW >700) or (self.mY+self.mH>800)): # Change if the height or width of the screen change
             return
         diffx = newX - self.mX
         diffy = newY - self.mY
