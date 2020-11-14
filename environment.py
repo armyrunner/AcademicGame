@@ -27,11 +27,11 @@ class ShopScene(Scene):
 	def __init__(self, width, height):
 		Scene.__init__(self, "Images/shop.jpg", width, height)
 		self.quiz_bank = quizdata.QuizData()
-		self.displaymode = ""
 		self.phase = 0
 		self.my_question = ""
 		self.my_answer = ""
 		self.all_answers = ""
+		self.bottom_dialog = pygame.Rect(0, height - height/12, width, height)
 
 	def updateDisplayLogic(self, answer = ""):
 		self.phase += 1
@@ -43,13 +43,13 @@ class ShopScene(Scene):
 		self.my_answer = ""
 		self.all_answers = ""
 		if self.phase == 1:
-			self.my_question = random.choice(list(quiz_bank.English.keys()))
-			self.my_answer = quiz_bank.English[self.my_question][0]
-			self.all_answers = quiz_bank.English[self.my_question][1]
+			self.my_question = random.choice(list(self.quiz_bank.English.keys()))
+			self.my_answer = self.quiz_bank.English[self.my_question][0]
+			self.all_answers = self.quiz_bank.English[self.my_question][1]
 		elif self.phase == 3:
-			self.my_question = random.choice(list(quiz_bank.Geography.keys()))
-			self.my_answer = quiz_bank.Geography[self.my_question][0]
-			self.all_answers = quiz_bank.Geography[self.my_question][1]
+			self.my_question = random.choice(list(self.quiz_bank.Geography.keys()))
+			self.my_answer = self.quiz_bank.Geography[self.my_question][0]
+			self.all_answers = self.quiz_bank.Geography[self.my_question][1]
 
 	def draw(self, surface):
 		Scene.draw(self, surface)
@@ -60,8 +60,12 @@ class ShopScene(Scene):
 			text_surface = self.font_obj.render(mytext, False, pygame.Color(0,0,0))
 			surface.blit(text_surface, self.dialog_rect)
 		else:
-			pass
-			#topdialog =  
+			top_text_surface = self.font_obj.render(self.my_question, True, pygame.Color(0,0,0))
+			bottom_text_surface = self.font_obj.render(self.all_answers, True, pygame.Color(0,0,0))
+			surface.blit(top_text_surface, self.dialog_rect)
+			surface.blit(bottom_text_surface, self.bottom_dialog)
+			
+
 
 
 
