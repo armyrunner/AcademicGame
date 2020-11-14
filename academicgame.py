@@ -13,10 +13,29 @@ class AcademicGame:
         self.mHero = hero.Hero(3,3,width,height,2,self.ammo)
         self.mWidth = width
         self.mHeight = height
+        self.GameOver = False
+        self.HeroWins = False
+
 
 
     def evolve(self,dt):
+
+        if self.GameOver:
+            return
+        
+
+    def actionUP():
         pass
+
+    def actionRIGHT():
+        pass
+
+    def actionLEFT():
+        pass
+
+    def acitionDown():
+        pass
+   
 
     def draw(self,surface):
         self.envShop.draw(surface)
