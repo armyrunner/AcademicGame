@@ -9,14 +9,14 @@ class Hero(character):
         return
 
     def getSpeed(self):
-        return mSpeed
+        return self.mSpeed
     
     def setSpeed(self,speed):
         self.mSpeed = speed
         return
 
     def getAmmo(self):
-        return mAmmo
+        return self.mAmmo
 
     def setAmmo(self,ammo):
         self.mAmmo = ammo

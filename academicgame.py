@@ -21,6 +21,10 @@ class AcademicGame:
         self.isJump = False
         self.jumpCount = 10
         self.velocity = 5
+        self.mX = 50
+        self.mY = 400
+        self.mObjWidth = 40
+        self.mObjHeight = 60
 
 
 
@@ -34,12 +38,21 @@ class AcademicGame:
         pass
 
     def actionRIGHT():
-        pass
+        if self.mX < self.mWidth - self.velocity - self.mObjWidth:
+            self.mX += self.velocity
+            self.left = True
+            self.right = False
+        else:
+            self.left = False
+            self.right = False
+            self.walkcount = 0
 
     def actionLEFT():
-
-        pass
-
+        if self.mX > self.velocity:
+            self.mX -= self.velocity
+            self.left = False
+            self.right = True
+    
     def acitionDown():
         pass
 
